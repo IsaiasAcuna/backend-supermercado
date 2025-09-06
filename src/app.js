@@ -15,7 +15,7 @@ dotenv.config();
 const PORT = process.env.PORT || 8080;
 
 app.use(cors({
-  origin: [ 'htpp://localhost:3000', 'https://frontend-supermercado.vercel.app/'],
+  origin: [ 'http://localhost:3000', 'https://frontend-supermercado.vercel.app/'],
   credentials: true,
 }));
 
