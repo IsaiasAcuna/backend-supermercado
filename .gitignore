@@ -1,0 +1,33 @@
+# Ignorar dependencias de Node.js
+node_modules/
+
+# Ignorar archivos de logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignorar archivos temporales o de caché
+pids/
+*.pid
+*.seed
+*.pid.lock
+*.tsbuildinfo
+
+# Ignorar archivos de cobertura de pruebas
+coverage/
+.nyc_output/
+
+# Ignorar archivos de configuración de herramientas (eslint, dotenv)
+.eslintcache
+.env
+
+# Ignorar carpetas de build o producción
+dist/
+build/
+
+# Ignorar archivos temporales del sistema o editores
+.DS_Store
+.vscode/
+*.swp
