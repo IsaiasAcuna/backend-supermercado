@@ -14,11 +14,21 @@ dotenv.config();
 
 const PORT = process.env.PORT || 8080;
 
-app.use(cors({
-  origin: [ 'http://localhost:3000', 'https://frontend-supermercado.vercel.app/'],
-  credentials: true,
-}));
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://frontend-supermercado.vercel.app"
+];
 
+app.use(cors({
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Origen no permitido por CORS"));
+    }
+  },
+  credentials: true
+}));
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
