@@ -16,7 +16,8 @@ const PORT = process.env.PORT || 8080;
 
 const allowedOrigins = [
   "http://localhost:3000",
-  "https://frontend-supermercado.vercel.app"
+  "https://frontend-supermercado.vercel.app",
+  "https://backend-supermercado.onrender.com"
 ];
 
 app.use(cors({
