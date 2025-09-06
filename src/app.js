@@ -15,7 +15,7 @@ dotenv.config();
 const PORT = process.env.PORT || 8080;
 
 app.use(cors({
-  origin: [ PORT, 'https://liverpool-web-6eys.onrender.com'],
+  origin: [ 'htpp://localhost:3000', 'https://frontend-supermercado.vercel.app/'],
   credentials: true,
 }));
 
